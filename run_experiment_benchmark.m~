@@ -14,8 +14,8 @@ env_setup;
 %            'datafolder',datafolder,...% folder for datasets
 %            'pair',[]};              % specific camera pairs
 
-datafolder = '../MOT16_ReID/SSMOT16-10'
-params = { 'name', 'ssmot10', ...
+datafolder = '../MOT16-ReID/MOT16-10'
+params = { 'name', 'mot16re', ...
             'datafolder', datafolder, ...
             'pair', [] };
 

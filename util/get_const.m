@@ -4,13 +4,13 @@ function output = get_const(const,dopts,fopts,mopts,ropts)
 
 datasetMulti = {'ilidsvid','prid','saivt','raid','ward','caviar'};
 datasetSingle = {'viper','grid','3dpes','hda','market','airport','DukeMTMC',...
-                  'cuhk_detected','cuhk01','cuhk02'};
+                  'cuhk_detected','cuhk01','cuhk02', 'ssmot10'};
               
 switch const
     case 'isMulti'
         output = ismember(dopts.name,datasetMulti);
     case 'imgSize'
-        if ismember(dopts.name,{'viper','cuhk01','caviar','3dpes','grid'})
+        if ismember(dopts.name,{'viper','cuhk01','caviar','3dpes','grid', 'ssmot10'})
             output = [128 48];
         else
             output = [128 64];
