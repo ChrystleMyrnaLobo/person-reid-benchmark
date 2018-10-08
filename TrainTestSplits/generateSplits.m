@@ -1,6 +1,16 @@
+% Split that data into train and test set for nSpilt loops
 
-data='cuhk02';
+% data: dataset name
+% pair: pair of cameras for dataset with >2 cameras
+% nSpilts: number of epocs with different train test set each epoc
+% nPersons: number of distinct persons in the dataset
+% nTraining: number of distict persons used for metric learning
 
+%data='cuhk02';
+data = 'ssmot10';
+
+% For dataset having more than two camera, we choose camera pairs to keep
+% it consistent with existing framework
 if(strcmp(data,'saivt')||strcmp(data,'ward')||strcmp(data,'raid'))
     pair='14'; % SAIVT: 38, 58, WARD: 12, 13, RAiD: 12, 13, 14
 end
@@ -8,6 +18,8 @@ end
 nSplits=10;
 
 switch data
+    case 'ssmot10'
+        nPersons=70;
     case 'viper'
         nPersons=632;
     case 'grid'
